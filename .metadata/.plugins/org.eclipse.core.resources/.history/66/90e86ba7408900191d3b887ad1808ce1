@@ -1,0 +1,22 @@
+package ru.kdv.springdemo;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan("ru.kdv.springdemo")
+public class SportConfig {
+	
+	@Bean
+	public SwimCoach swimCoach(badAdviseFactory()) {
+		
+	}
+	
+	@Bean
+	public AdviseFactory badAdviseFactory() {
+		AdviseFactory adviseFactory = new BadAdviseFactory();
+		return adviseFactory;
+	}
+
+}

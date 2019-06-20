@@ -1,0 +1,9 @@
+package ru.kdv.springdemo;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+
+public class SportConfig {
+
+}

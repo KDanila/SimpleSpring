@@ -1,0 +1,12 @@
+package ru.kdv.springdemo;
+
+import org.springframework.stereotype.Component;
+
+public class GoodAdviseFactory implements AdviseFactory{
+
+	@Override
+	public String getAdvise() {
+		return "Drink more water!";
+	}
+
+}

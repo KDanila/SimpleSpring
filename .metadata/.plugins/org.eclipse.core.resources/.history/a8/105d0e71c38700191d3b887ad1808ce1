@@ -1,0 +1,14 @@
+package ru.kdv.springdemo;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class HelloSpringApp {
+
+	public static void main(String[] args) {
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("C:\\Users\\KDV\\eclipse-workspace\\spring-demo-one\\src\\ru\\kdv\\springdemo\\HelloSpringApp.java");
+		Coach theCoach = context.getBean("MyCoach", Coach.class);
+		System.out.println(theCoach.getDailyWorkout());
+		context.close();
+	}
+
+}

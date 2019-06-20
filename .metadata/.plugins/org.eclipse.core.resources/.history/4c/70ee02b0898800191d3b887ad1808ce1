@@ -1,0 +1,7 @@
+package ru.kdv.springdemo;
+
+public class CoachApp {
+	public static void main(Args[] args) {
+		
+	}
+}

@@ -1,0 +1,11 @@
+package ru.kdv.springdemo;
+
+public class SwimCoach implements Coach {
+
+	@Override
+	public String getWorkout() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,5 @@
+package ru.kdv.demospring;
+
+public class StudentController {
+
+}

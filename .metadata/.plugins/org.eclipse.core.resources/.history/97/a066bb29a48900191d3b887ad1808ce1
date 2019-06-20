@@ -1,0 +1,33 @@
+package ru.kdv.springdemo;
+
+import java.io.File;
+import java.util.List;
+
+import javax.annotation.PostConstruct;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+
+@Component
+public class FIleAdvisroyFactory implements AdviseFactory {
+	
+	@Value("${fileName}")
+	private String fileName;
+	
+	private List<String> advisory;
+	
+	@PostConstruct
+	private void getAdvisoryFromFile() {
+		File file = new File(fileName);
+		
+		System.out.println("Is file exists? "+file.exists());
+	}
+	
+	@Override
+	public String getAdvise() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

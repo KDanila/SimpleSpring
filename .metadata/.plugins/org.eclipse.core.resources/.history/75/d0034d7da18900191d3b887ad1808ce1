@@ -1,0 +1,10 @@
+package ru.kdv.springdemo;
+
+public class GoodAdviseFactory implements AdviseFactory{
+
+	@Override
+	public String getAdvise() {
+		return "Drink more water!";
+	}
+
+}

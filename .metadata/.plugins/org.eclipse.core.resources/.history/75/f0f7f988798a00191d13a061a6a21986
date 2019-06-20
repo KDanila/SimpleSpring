@@ -1,0 +1,24 @@
+package ru.kdv.springdemo;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class SwimCoach implements Coach {
+	
+	AdviseFactory adviseFactory;
+
+	public SwimCoach(AdviseFactory adviseFactory) {
+		this.adviseFactory = adviseFactory;
+	}
+
+	@Override
+	public String getWorkout() {
+		return "Swim more";
+	}
+
+	@Override
+	public String getAdvise() {
+		return adviseFactory.getAdvise();
+	}
+
+}

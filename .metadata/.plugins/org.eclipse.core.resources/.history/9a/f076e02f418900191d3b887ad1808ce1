@@ -1,0 +1,15 @@
+package ru.kdv.springdemo;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class JavaConfigCoachApp {
+
+	public static void main(String[] args) {
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		TennisCoach coach = context.getBean("tennisCoach",TennisCoach.class);
+		System.out.println(coach.getAdvise());
+		System.out.println(coach.getWorkout());
+		context.close();
+	}
+
+}
